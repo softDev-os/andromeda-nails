@@ -28,12 +28,12 @@ const articleDate = pubDate.toISOString()
 		<header class='mb-3 flex flex-col justify-center items-center gap-6'>
 			<div class='flex flex-col gap-2'>
 				<div class='flex items-center justify-center gap-x-1'>
-					<p class='text-center text-sm text-opacity-50'>
-						Published <FormattedDate date={pubDate} />
-					</p>
-					<p class='text-center text-sm text-opacity-50 font-bold'>
-						- {readTime}
-					</p>
+					<!-- <p class='text-center text-sm text-opacity-50'> -->
+					<!-- 	Published <FormattedDate date={pubDate} /> -->
+					<!-- </p> -->
+					<!-- <p class='text-center text-sm text-opacity-50 font-bold'> -->
+					<!-- 	- {readTime} -->
+					<!-- </p> -->
 				</div>
 				<h1 class='title text-center text-4xl md:text-6xl md:pb-2.5 font-semibold opacity-0'>
 					{title}
@@ -76,13 +76,13 @@ const articleDate = pubDate.toISOString()
 </BaseLayout>
 
 <script is:inline>
-	const img = document.querySelector('img')
-	const placeholder = document.querySelector('.placeholder')
+const img = document.querySelector('img')
+const placeholder = document.querySelector('.placeholder')
 
-	img?.addEventListener('load', () => {
-		img.classList.add('opacity-100')
-		placeholder.classList.add('opacity-0')
-	})
+img?.addEventListener('load', () => {
+	img.classList.add('opacity-100')
+	placeholder.classList.add('opacity-0')
+})
 </script>
 
 <script>
