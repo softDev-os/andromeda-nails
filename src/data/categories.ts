@@ -1,2 +1,2 @@
 // List of categories for blog posts
-export const CATEGORIES = ['Acrilicas', 'Polygel', 'Comercial', 'Semi', 'Pedicure', 'Spa'] as const
+export const CATEGORIES = ['Acrilicas', 'Comercial', 'Pedicure', 'Polygel', 'Semi', 'Spa'] as const

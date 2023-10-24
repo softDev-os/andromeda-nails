@@ -11,6 +11,10 @@
 		@apply text-base;
 	}
 
+	.nav-link {
+		@apply dark:text-white py-1.5 font-medium hover:text-gray-800 border-b-2 border-opacity-0 dark:border-opacity-0 border-black dark:border-white dark:hover:border-white hover:border-opacity-100 transition-colors duration-150 ease-linear;
+	}
+
 	@font-face {
 		font-family: Manrope;
 		src: url(../assets/fonts/Manrope-SemiBold.woff2) format('woff2');
