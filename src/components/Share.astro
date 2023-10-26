@@ -12,15 +12,12 @@ const URL = Astro.url.href
 	<ul class='flex gap-3 text-black dark:text-white'>
 		<li>
 			<a
-				href={`https://www.facebook.com/sharer/sharer.php?u=${URL}`}
+				href={`https://www.facebook.com/sharer/sharer.php?u=${message + ' ' + URL}`}
 				aria-label='Comparte en Facebook'><FacebookBlogIcon /></a
 			>
 		</li>
 		<li>
-			<a
-				href={`https://www.instagram.com/sharer/sharer.php?u=${URL}`}
-				aria-label='Comparte en Instagram'
-			>
+			<a href={`https://www.instagram.com/?url=${URL}`} aria-label='Comparte en Instagram'>
 				<InstagramBlogIcon /></a
 			>
 		</li>
