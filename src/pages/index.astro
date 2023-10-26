@@ -4,6 +4,7 @@ import ListPosts from '@/components/ListPosts'
 import TitlePage from '@/components/TitlePage'
 import BaseLayout from '@/layouts/BaseLayout'
 import Hero from '@/components/Hero'
+import CarruselImgs from '@/components/CarruselImgs'
 import { getPosts } from '@/utils'
 
 const MAX_POSTS = 40 // max number of posts to show on the home page
@@ -12,6 +13,7 @@ const posts = await getPosts(MAX_POSTS)
 
 <BaseLayout title='Inicio'>
 	<Hero />
+	<CarruselImgs />
 	<TitlePage title='Todos Nuestros modelos' />
 	<ListCategories />
 
