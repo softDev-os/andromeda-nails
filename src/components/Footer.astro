@@ -1,7 +1,37 @@
 ---
 const today = new Date()
+import HeaderLink from '@/components/HeaderLink'
+import FacebookBlogIcon from '@/components/icons/FacebookBlogIcon'
+import InstagramBlogIcon from '@/components/icons/InstagramBlogIcon'
+// ADD YOUR SOCIAL NETWORKS HERE
+const SOCIALNETWORKS = [
+	{
+		name: 'Facebook',
+		url: 'https://www.facebook.com/profile.php?id=61552380525390',
+		icon: FacebookBlogIcon
+	},
+
+	{
+		name: 'Instagram',
+		url: 'https://www.instagram.com/andromeda_nails_art/',
+		icon: InstagramBlogIcon
+	}
+]
 ---
 
-<footer class='flex justify-center items-center w-full px-16 h-28 border-t-2'>
-	&copy; {today.getFullYear()} Todos los derechos reservados.
+<footer class='grid columns-2 w-full px-2 h-28 border-t-2'>
+	<div class='flex justify-end items-center'>
+		<nav class='grid grid-flow-col gap-4'>
+			{
+				SOCIALNETWORKS.map((network) => (
+					<HeaderLink class='' href={network.url} target='_blank' aria-label={network.name}>
+						<span>{<network.icon />} </span>
+					</HeaderLink>
+				))
+			}
+		</nav>
+	</div>
+	<aside class='flex justify-center items-center w-full pb-8 h-8'>
+		<p>&copy; {today.getFullYear()} Todos los derechos reservados.</p>
+	</aside>
 </footer>
