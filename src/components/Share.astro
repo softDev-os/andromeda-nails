@@ -1,7 +1,7 @@
 ---
 import { siteConfig } from '@/data/site.config'
 import FacebookBlogIcon from './icons/FacebookBlogIcon.astro'
-import InstagramBlogIcon from './icons/InstagramBlogIcon.astro'
+import TwitterColorIcon from './icons/TwitterColorIcon.astro'
 const message = siteConfig.shareMessage
 
 const URL = Astro.url.href
@@ -17,8 +17,9 @@ const URL = Astro.url.href
 			>
 		</li>
 		<li>
-			<a href={`https://www.instagram.com/?url=${URL}`} aria-label='Comparte en Instagram'>
-				<InstagramBlogIcon /></a
+			<a
+				href={`https://twitter.com/intent/tweet?text=${message + ' ' + URL}`}
+				aria-label='Share on Twitter'><TwitterColorIcon /></a
 			>
 		</li>
 	</ul>
