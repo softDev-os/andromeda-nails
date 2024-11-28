@@ -10,6 +10,8 @@
 		}
 	],
 	"env": {
-		"NODE_ENV": "production"
+		"NODE_ENV": "production",
+		"CXXFLAGS": "-std=c++17",
+		"NODE_VERSION": "20.x"
 	}
 }
